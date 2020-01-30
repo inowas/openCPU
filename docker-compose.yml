@@ -2,7 +2,7 @@ version: "2.1"
 
 services:
   app:
-    image: opencpu/base:latest
+    build: openCPU
     restart: always
     expose:
       - 80
