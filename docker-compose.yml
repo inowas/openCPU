@@ -2,7 +2,7 @@ version: "2.1"
 
 services:
   app:
-    image: inowas/openCPU:latest
+    image: inowas/opencpu:latest
     restart: always
     expose:
       - 80
