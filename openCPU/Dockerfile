@@ -44,4 +44,4 @@ CMD service cron start && apachectl -DFOREGROUND
 # Now install the relevent packages
 RUN R -e 'install.packages("remotes", repos = "https://cloud.r-project.org")'
 RUN R -e 'remotes::install_github("KWB-R/kwb.heatsine.opencpu@v0.1.0")'
-RUN R -e 'remotes::install_github("KWB-R/kwb.qmra@e23bd9f7ec05b43fb9eb92456f5fafff01b70ab7")'
+RUN R -e 'remotes::install_github("KWB-R/kwb.qmra")'
