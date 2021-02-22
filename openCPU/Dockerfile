@@ -3,8 +3,6 @@ FROM ubuntu:20.04
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN R --version
-
 # Install R4.0 manually
 RUN \
   apt-get update && \
