@@ -1,22 +1,21 @@
-{"config": {
+{
   "exposure": [
     {
       "name": "number_of_repeatings",
       "type": "value",
-      "value": 10
+      "value": 1000
     },
     {
       "name": "number_of_exposures",
       "type": "value",
-      "value": 365
+      "value": 100
     },
     {
       "name": "volume_perEvent",
       "type": "triangle",
-      "min": 0.5,
-      "max": 3,
-      "mode": 1.5,
-      "mean": 2
+      "min": 0.001,
+      "max": 0.01,
+      "mode": 0.005
     }
   ],
   "inflow": [
@@ -25,333 +24,384 @@
       "PathogenName": "Bacillus anthracis",
       "PathogenGroup": "Bacteria",
       "simulate": 0,
-      "type": "uniform",
+      "type": "log10_norm",
       "min": 10,
-      "max": 10000
+      "max": 10000,
+      "Notes": "default"
     },
     {
       "PathogenID": 2,
       "PathogenName": "Burkholderia pseudomallei",
       "PathogenGroup": "Bacteria",
       "simulate": 0,
-      "type": "uniform",
+      "type": "log10_norm",
       "min": 10,
-      "max": 10000
+      "max": 10000,
+      "Notes": "default"
     },
     {
       "PathogenID": 3,
       "PathogenName": "Campylobacter jejuni and Campylobacter coli",
       "PathogenGroup": "Bacteria",
-      "simulate": 1,
-      "type": "uniform",
-      "min": 10,
-      "max": 10000
+      "simulate": 0,
+      "type": "log10_norm",
+      "min": 100,
+      "max": 1000000,
+      "Notes": "Raw wastewater Campylobacter spp.",
+      "ReferenceName": "WHO (2011): Guidelines for drinking-water quality. World Health Organisation, Table 7.6",
+      "ReferenceLink": "http://apps.who.int/iris/bitstream/10665/44584/1/9789241548151_eng.pdf#page=159"
     },
     {
       "PathogenID": 4,
       "PathogenName": "Coxiella burnetii",
       "PathogenGroup": "Bacteria",
       "simulate": 0,
-      "type": "uniform",
+      "type": "log10_norm",
       "min": 10,
-      "max": 10000
+      "max": 10000,
+      "Notes": "default"
     },
     {
       "PathogenID": 5,
       "PathogenName": "Escherichia coli enterohemorrhagic (EHEC)",
       "PathogenGroup": "Bacteria",
       "simulate": 0,
-      "type": "uniform",
+      "type": "log10_norm",
       "min": 10,
-      "max": 10000
+      "max": 10000,
+      "Notes": "default"
     },
     {
       "PathogenID": 6,
       "PathogenName": "Escherichia coli",
       "PathogenGroup": "Bacteria",
-      "simulate": 0,
-      "type": "uniform",
-      "min": 10,
-      "max": 10000
+      "simulate": 1,
+      "type": "log10_norm",
+      "min": 170000,
+      "max": 1700000000,
+      "Notes": "Raw wastewater 17% pathogenic fraction",
+      "ReferenceName": "WHO (2011): Guidelines for drinking-water quality. World Health Organisation, Table 7.6, Grant et al. (1996)",
+      "ReferenceLink": "http://apps.who.int/iris/bitstream/10665/44584/1/9789241548151_eng.pdf#page=159, https://doi.org/10.1128/AEM.62.9.3466-3469.1996"
     },
     {
       "PathogenID": 7,
       "PathogenName": "Francisella tularensis",
       "PathogenGroup": "Bacteria",
       "simulate": 0,
-      "type": "uniform",
+      "type": "log10_norm",
       "min": 10,
-      "max": 10000
+      "max": 10000,
+      "Notes": "default"
     },
     {
       "PathogenID": 8,
       "PathogenName": "Legionella pneumophila",
       "PathogenGroup": "Bacteria",
       "simulate": 0,
-      "type": "uniform",
+      "type": "log10_norm",
       "min": 10,
-      "max": 10000
+      "max": 10000,
+      "Notes": "default"
     },
     {
       "PathogenID": 9,
       "PathogenName": "Listeria monocytogenes (Death as response)",
       "PathogenGroup": "Bacteria",
       "simulate": 0,
-      "type": "uniform",
+      "type": "log10_norm",
       "min": 10,
-      "max": 10000
+      "max": 10000,
+      "Notes": "default"
     },
     {
       "PathogenID": 10,
       "PathogenName": "Listeria monocytogenes (Infection)",
       "PathogenGroup": "Bacteria",
       "simulate": 0,
-      "type": "uniform",
+      "type": "log10_norm",
       "min": 10,
-      "max": 10000
+      "max": 10000,
+      "Notes": "default"
     },
     {
       "PathogenID": 11,
       "PathogenName": "Listeria monocytogenes (Stillbirths)",
       "PathogenGroup": "Bacteria",
       "simulate": 0,
-      "type": "uniform",
+      "type": "log10_norm",
       "min": 10,
-      "max": 10000
+      "max": 10000,
+      "Notes": "default"
     },
     {
       "PathogenID": 12,
       "PathogenName": "Mycobacterium avium",
       "PathogenGroup": "Bacteria",
       "simulate": 0,
-      "type": "uniform",
+      "type": "log10_norm",
       "min": 10,
-      "max": 10000
+      "max": 10000,
+      "Notes": "default"
     },
     {
       "PathogenID": 13,
       "PathogenName": "Pseudomonas aeruginosa (Contact lens)",
       "PathogenGroup": "Bacteria",
       "simulate": 0,
-      "type": "uniform",
+      "type": "log10_norm",
       "min": 10,
-      "max": 10000
+      "max": 10000,
+      "Notes": "default"
     },
     {
       "PathogenID": 14,
       "PathogenName": "Pseudomonas aeruginosa (bacterimia)",
       "PathogenGroup": "Bacteria",
       "simulate": 0,
-      "type": "uniform",
+      "type": "log10_norm",
       "min": 10,
-      "max": 10000
+      "max": 10000,
+      "Notes": "default"
     },
     {
       "PathogenID": 15,
       "PathogenName": "Rickettsia rickettsi",
       "PathogenGroup": "Bacteria",
       "simulate": 0,
-      "type": "uniform",
+      "type": "log10_norm",
       "min": 10,
-      "max": 10000
+      "max": 10000,
+      "Notes": "default"
     },
     {
       "PathogenID": 16,
       "PathogenName": "Salmonella Typhi",
       "PathogenGroup": "Bacteria",
       "simulate": 0,
-      "type": "uniform",
+      "type": "log10_norm",
       "min": 10,
-      "max": 10000
+      "max": 10000,
+      "Notes": "default"
     },
     {
       "PathogenID": 17,
       "PathogenName": "Salmonella anatum",
       "PathogenGroup": "Bacteria",
       "simulate": 0,
-      "type": "uniform",
+      "type": "log10_norm",
       "min": 10,
-      "max": 10000
+      "max": 10000,
+      "Notes": "default"
     },
     {
       "PathogenID": 18,
       "PathogenName": "Salmonella meleagridis",
       "PathogenGroup": "Bacteria",
       "simulate": 0,
-      "type": "uniform",
+      "type": "log10_norm",
       "min": 10,
-      "max": 10000
+      "max": 10000,
+      "Notes": "default"
     },
     {
       "PathogenID": 19,
       "PathogenName": "Salmonella nontyphoid",
       "PathogenGroup": "Bacteria",
       "simulate": 0,
-      "type": "uniform",
+      "type": "log10_norm",
       "min": 10,
-      "max": 10000
+      "max": 10000,
+      "Notes": "default"
     },
     {
       "PathogenID": 20,
       "PathogenName": "Salmonella serotype newport",
       "PathogenGroup": "Bacteria",
       "simulate": 0,
-      "type": "uniform",
+      "type": "log10_norm",
       "min": 10,
-      "max": 10000
+      "max": 10000,
+      "Notes": "default"
     },
     {
       "PathogenID": 21,
       "PathogenName": "Shigella",
       "PathogenGroup": "Bacteria",
       "simulate": 0,
-      "type": "uniform",
+      "type": "log10_norm",
       "min": 10,
-      "max": 10000
+      "max": 10000,
+      "Notes": "default"
     },
     {
       "PathogenID": 22,
       "PathogenName": "Staphylococcus aureus",
       "PathogenGroup": "Bacteria",
       "simulate": 0,
-      "type": "uniform",
+      "type": "log10_norm",
       "min": 10,
-      "max": 10000
+      "max": 10000,
+      "Notes": "default"
     },
     {
       "PathogenID": 23,
       "PathogenName": "Vibrio cholerae",
       "PathogenGroup": "Bacteria",
       "simulate": 0,
-      "type": "uniform",
-      "min": 10,
-      "max": 10000
+      "type": "log10_norm",
+      "min": 100,
+      "max": 1000000,
+      "Notes": "Raw wastewater",
+      "ReferenceName": "WHO (2011): Guidelines for drinking-water quality. World Health Organisation, Table 7.6",
+      "ReferenceLink": "http://apps.who.int/iris/bitstream/10665/44584/1/9789241548151_eng.pdf#page=159"
     },
     {
       "PathogenID": 24,
       "PathogenName": "Yersinia pestis",
       "PathogenGroup": "Bacteria",
       "simulate": 0,
-      "type": "uniform",
+      "type": "log10_norm",
       "min": 10,
-      "max": 10000
+      "max": 10000,
+      "Notes": "default"
     },
     {
       "PathogenID": 25,
       "PathogenName": "Adenovirus",
       "PathogenGroup": "Viruses",
       "simulate": 0,
-      "type": "uniform",
+      "type": "log10_norm",
       "min": 10,
-      "max": 10000
+      "max": 10000,
+      "Notes": "default"
     },
     {
       "PathogenID": 26,
       "PathogenName": "Echovirus",
       "PathogenGroup": "Viruses",
       "simulate": 0,
-      "type": "uniform",
+      "type": "log10_norm",
       "min": 10,
-      "max": 10000
+      "max": 10000,
+      "Notes": "default"
     },
     {
       "PathogenID": 27,
       "PathogenName": "Enteroviruses",
       "PathogenGroup": "Viruses",
       "simulate": 0,
-      "type": "uniform",
-      "min": 10,
-      "max": 10000
+      "type": "log10_norm",
+      "min": 1,
+      "max": 1000,
+      "Notes": "Raw wastewater",
+      "ReferenceName": "WHO (2011): Guidelines for drinking-water quality. World Health Organisation, Table 7.6",
+      "ReferenceLink": "http://apps.who.int/iris/bitstream/10665/44584/1/9789241548151_eng.pdf#page=159"
     },
     {
       "PathogenID": 28,
       "PathogenName": "Influenza",
       "PathogenGroup": "Viruses",
       "simulate": 0,
-      "type": "uniform",
+      "type": "log10_norm",
       "min": 10,
-      "max": 10000
+      "max": 10000,
+      "Notes": "default"
     },
     {
       "PathogenID": 29,
       "PathogenName": "Lassa virus",
       "PathogenGroup": "Viruses",
       "simulate": 0,
-      "type": "uniform",
+      "type": "log10_norm",
       "min": 10,
-      "max": 10000
+      "max": 10000,
+      "Notes": "default"
     },
     {
       "PathogenID": 30,
       "PathogenName": "Poliovirus",
       "PathogenGroup": "Viruses",
       "simulate": 0,
-      "type": "uniform",
+      "type": "log10_norm",
       "min": 10,
-      "max": 10000
+      "max": 10000,
+      "Notes": "default"
     },
     {
       "PathogenID": 31,
       "PathogenName": "Rhinovirus",
       "PathogenGroup": "Viruses",
       "simulate": 0,
-      "type": "uniform",
+      "type": "log10_norm",
       "min": 10,
-      "max": 10000
+      "max": 10000,
+      "Notes": "default"
     },
     {
       "PathogenID": 32,
       "PathogenName": "Rotavirus",
       "PathogenGroup": "Viruses",
       "simulate": 1,
-      "type": "uniform",
-      "min": 10,
-      "max": 10000
+      "type": "log10_norm",
+      "min": 50,
+      "max": 5000,
+      "Notes": "Raw wastewater",
+      "ReferenceName": "WHO (2011): Guidelines for drinking-water quality. World Health Organisation, Table 7.6",
+      "ReferenceLink": "http://apps.who.int/iris/bitstream/10665/44584/1/9789241548151_eng.pdf#page=159"
     },
     {
       "PathogenID": 33,
       "PathogenName": "SARS",
       "PathogenGroup": "Viruses",
       "simulate": 0,
-      "type": "uniform",
+      "type": "log10_norm",
       "min": 10,
-      "max": 10000
+      "max": 10000,
+      "Notes": "default"
     },
     {
       "PathogenID": 34,
       "PathogenName": "Cryptosporidium parvum and Cryptosporidium hominis",
       "PathogenGroup": "Protozoa",
       "simulate": 0,
-      "type": "uniform",
-      "min": 10,
-      "max": 10000
+      "type": "log10_norm",
+      "min": 1,
+      "max": 10000,
+      "sdlog": "NA\"Raw wastewater\"",
+      "Notes": "WHO (2011): Guidelines for drinking-water quality. World Health Organisation, Table 7.6",
+      "ReferenceName": "http://apps.who.int/iris/bitstream/10665/44584/1/9789241548151_eng.pdf#page=159"
     },
     {
       "PathogenID": 35,
       "PathogenName": "Endamoeba coli",
       "PathogenGroup": "Protozoa",
       "simulate": 0,
-      "type": "uniform",
+      "type": "log10_norm",
       "min": 10,
-      "max": 10000
+      "max": 10000,
+      "Notes": "default"
     },
     {
       "PathogenID": 36,
       "PathogenName": "Giardia duodenalis",
       "PathogenGroup": "Protozoa",
       "simulate": 1,
-      "type": "uniform",
-      "min": 10,
-      "max": 10000
+      "type": "log10_norm",
+      "min": 1,
+      "max": 10000,
+      "Notes": "Raw wastewater",
+      "ReferenceName": "WHO (2011): Guidelines for drinking-water quality. World Health Organisation, Table 7.6",
+      "ReferenceLink": "http://apps.who.int/iris/bitstream/10665/44584/1/9789241548151_eng.pdf#page=159"
     },
     {
       "PathogenID": 37,
       "PathogenName": "Naegleria fowleri",
       "PathogenGroup": "Protozoa",
       "simulate": 0,
-      "type": "uniform",
+      "type": "log10_norm",
       "min": 10,
-      "max": 10000
+      "max": 10000,
+      "Notes": "default"
     }
   ],
   "treatment": {
@@ -363,7 +413,9 @@
         "PathogenGroup": "Bacteria",
         "type": "uniform",
         "min": 0.2,
-        "max": 2
+        "max": 2,
+        "ReferenceName": "WHO (2011): Drinking water guideline, Table 7.7",
+        "ReferenceLink": "http://apps.who.int/iris/bitstream/10665/44584/1/9789241548151_eng.pdf#page=162"
       },
       {
         "TreatmentID": 1,
@@ -372,7 +424,9 @@
         "PathogenGroup": "Protozoa",
         "type": "uniform",
         "min": 1,
-        "max": 2
+        "max": 2,
+        "ReferenceName": "WHO (2011): Drinking water guideline, Table 7.7",
+        "ReferenceLink": "http://apps.who.int/iris/bitstream/10665/44584/1/9789241548151_eng.pdf#page=162"
       },
       {
         "TreatmentID": 1,
@@ -381,7 +435,9 @@
         "PathogenGroup": "Viruses",
         "type": "uniform",
         "min": 0.1,
-        "max": 3.4
+        "max": 3.4,
+        "ReferenceName": "WHO (2011): Drinking water guideline, Table 7.7",
+        "ReferenceLink": "http://apps.who.int/iris/bitstream/10665/44584/1/9789241548151_eng.pdf#page=162"
       },
       {
         "TreatmentID": 2,
@@ -390,7 +446,9 @@
         "PathogenGroup": "Protozoa",
         "type": "uniform",
         "min": 0.6,
-        "max": 2.6
+        "max": 2.6,
+        "ReferenceName": "WHO (2011): Drinking water guideline, Table 7.7",
+        "ReferenceLink": "http://apps.who.int/iris/bitstream/10665/44584/1/9789241548151_eng.pdf#page=162"
       },
       {
         "TreatmentID": 3,
@@ -399,7 +457,9 @@
         "PathogenGroup": "Protozoa",
         "type": "uniform",
         "min": 2,
-        "max": 2.8
+        "max": 2.8,
+        "ReferenceName": "WHO (2011): Drinking water guideline, Table 7.7",
+        "ReferenceLink": "http://apps.who.int/iris/bitstream/10665/44584/1/9789241548151_eng.pdf#page=162"
       },
       {
         "TreatmentID": 4,
@@ -408,7 +468,9 @@
         "PathogenGroup": "Bacteria",
         "type": "uniform",
         "min": 1,
-        "max": 4
+        "max": 4,
+        "ReferenceName": "WHO (2011): Drinking water guideline, Table 7.7",
+        "ReferenceLink": "http://apps.who.int/iris/bitstream/10665/44584/1/9789241548151_eng.pdf#page=162"
       },
       {
         "TreatmentID": 4,
@@ -417,7 +479,9 @@
         "PathogenGroup": "Protozoa",
         "type": "uniform",
         "min": 0,
-        "max": 2
+        "max": 2,
+        "ReferenceName": "WHO (2011): Drinking water guideline, Table 7.7",
+        "ReferenceLink": "http://apps.who.int/iris/bitstream/10665/44584/1/9789241548151_eng.pdf#page=162"
       },
       {
         "TreatmentID": 4,
@@ -426,7 +490,9 @@
         "PathogenGroup": "Viruses",
         "type": "uniform",
         "min": 2,
-        "max": 4
+        "max": 4,
+        "ReferenceName": "WHO (2011): Drinking water guideline, Table 7.7",
+        "ReferenceLink": "http://apps.who.int/iris/bitstream/10665/44584/1/9789241548151_eng.pdf#page=162"
       },
       {
         "TreatmentID": 5,
@@ -435,7 +501,9 @@
         "PathogenGroup": "Bacteria",
         "type": "uniform",
         "min": 0.2,
-        "max": 4.4
+        "max": 4.4,
+        "ReferenceName": "WHO (2011): Drinking water guideline, Table 7.7",
+        "ReferenceLink": "http://apps.who.int/iris/bitstream/10665/44584/1/9789241548151_eng.pdf#page=162"
       },
       {
         "TreatmentID": 5,
@@ -444,7 +512,9 @@
         "PathogenGroup": "Protozoa",
         "type": "uniform",
         "min": 0.4,
-        "max": 3.3
+        "max": 3.3,
+        "ReferenceName": "WHO (2011): Drinking water guideline, Table 7.7",
+        "ReferenceLink": "http://apps.who.int/iris/bitstream/10665/44584/1/9789241548151_eng.pdf#page=162"
       },
       {
         "TreatmentID": 5,
@@ -453,34 +523,9 @@
         "PathogenGroup": "Viruses",
         "type": "uniform",
         "min": 0,
-        "max": 3.5
-      },
-      {
-        "TreatmentID": 6,
-        "TreatmentName": "Membrane filtration (micro, ultra-, nanofiltration, reverse osmosis)",
-        "TreatmentGroup": "Filtration",
-        "PathogenGroup": "Bacteria",
-        "type": "uniform",
-        "min": 1,
-        "max": 7
-      },
-      {
-        "TreatmentID": 6,
-        "TreatmentName": "Membrane filtration (micro, ultra-, nanofiltration, reverse osmosis)",
-        "TreatmentGroup": "Filtration",
-        "PathogenGroup": "Protozoa",
-        "type": "uniform",
-        "min": 2.3,
-        "max": 7
-      },
-      {
-        "TreatmentID": 6,
-        "TreatmentName": "Membrane filtration (micro, ultra-, nanofiltration, reverse osmosis)",
-        "TreatmentGroup": "Filtration",
-        "PathogenGroup": "Viruses",
-        "type": "uniform",
-        "min": 1,
-        "max": 6.5
+        "max": 3.5,
+        "ReferenceName": "WHO (2011): Drinking water guideline, Table 7.7",
+        "ReferenceLink": "http://apps.who.int/iris/bitstream/10665/44584/1/9789241548151_eng.pdf#page=162"
       },
       {
         "TreatmentID": 7,
@@ -489,7 +534,9 @@
         "PathogenGroup": "Bacteria",
         "type": "uniform",
         "min": 0.2,
-        "max": 2.3
+        "max": 2.3,
+        "ReferenceName": "WHO (2011): Drinking water guideline, Table 7.7",
+        "ReferenceLink": "http://apps.who.int/iris/bitstream/10665/44584/1/9789241548151_eng.pdf#page=162"
       },
       {
         "TreatmentID": 7,
@@ -498,7 +545,9 @@
         "PathogenGroup": "Protozoa",
         "type": "uniform",
         "min": 3,
-        "max": 6.7
+        "max": 6.7,
+        "ReferenceName": "WHO (2011): Drinking water guideline, Table 7.7",
+        "ReferenceLink": "http://apps.who.int/iris/bitstream/10665/44584/1/9789241548151_eng.pdf#page=162"
       },
       {
         "TreatmentID": 7,
@@ -507,7 +556,9 @@
         "PathogenGroup": "Viruses",
         "type": "uniform",
         "min": 1,
-        "max": 1.7
+        "max": 1.7,
+        "ReferenceName": "WHO (2011): Drinking water guideline, Table 7.7",
+        "ReferenceLink": "http://apps.who.int/iris/bitstream/10665/44584/1/9789241548151_eng.pdf#page=162"
       },
       {
         "TreatmentID": 8,
@@ -516,7 +567,9 @@
         "PathogenGroup": "Bacteria",
         "type": "uniform",
         "min": 2,
-        "max": 6
+        "max": 6,
+        "ReferenceName": "WHO (2011): Drinking water guideline, Table 7.7",
+        "ReferenceLink": "http://apps.who.int/iris/bitstream/10665/44584/1/9789241548151_eng.pdf#page=162"
       },
       {
         "TreatmentID": 8,
@@ -525,7 +578,9 @@
         "PathogenGroup": "Protozoa",
         "type": "uniform",
         "min": 0.3,
-        "max": 5
+        "max": 5,
+        "ReferenceName": "WHO (2011): Drinking water guideline, Table 7.7",
+        "ReferenceLink": "http://apps.who.int/iris/bitstream/10665/44584/1/9789241548151_eng.pdf#page=162"
       },
       {
         "TreatmentID": 8,
@@ -534,34 +589,43 @@
         "PathogenGroup": "Viruses",
         "type": "uniform",
         "min": 0.25,
-        "max": 4
+        "max": 4,
+        "ReferenceName": "WHO (2011): Drinking water guideline, Table 7.7",
+        "ReferenceLink": "http://apps.who.int/iris/bitstream/10665/44584/1/9789241548151_eng.pdf#page=162"
       },
       {
         "TreatmentID": 9,
         "TreatmentName": "Bank filtration",
-        "TreatmentGroup": "Pretreatment",
+        "TreatmentGroup": "Natural attenuation",
         "PathogenGroup": "Bacteria",
         "type": "uniform",
         "min": 2,
-        "max": 6
+        "max": 6,
+        "mean": 4,
+        "ReferenceName": "WHO (2011): Drinking water guideline, Table 7.7",
+        "ReferenceLink": "http://apps.who.int/iris/bitstream/10665/44584/1/9789241548151_eng.pdf#page=162"
       },
       {
         "TreatmentID": 9,
         "TreatmentName": "Bank filtration",
-        "TreatmentGroup": "Pretreatment",
+        "TreatmentGroup": "Natural attenuation",
         "PathogenGroup": "Protozoa",
         "type": "uniform",
         "min": 1,
-        "max": 2
+        "max": 2,
+        "ReferenceName": "WHO (2011): Drinking water guideline, Table 7.7",
+        "ReferenceLink": "http://apps.who.int/iris/bitstream/10665/44584/1/9789241548151_eng.pdf#page=162"
       },
       {
         "TreatmentID": 9,
         "TreatmentName": "Bank filtration",
-        "TreatmentGroup": "Pretreatment",
+        "TreatmentGroup": "Natural attenuation",
         "PathogenGroup": "Viruses",
         "type": "uniform",
         "min": 2.1,
-        "max": 8.3
+        "max": 8.3,
+        "ReferenceName": "WHO (2011): Drinking water guideline, Table 7.7",
+        "ReferenceLink": "http://apps.who.int/iris/bitstream/10665/44584/1/9789241548151_eng.pdf#page=162"
       },
       {
         "TreatmentID": 10,
@@ -570,7 +634,9 @@
         "PathogenGroup": "Bacteria",
         "type": "uniform",
         "min": 0.2,
-        "max": 2.3
+        "max": 2.3,
+        "ReferenceName": "WHO (2011): Drinking water guideline, Table 7.7",
+        "ReferenceLink": "http://apps.who.int/iris/bitstream/10665/44584/1/9789241548151_eng.pdf#page=162"
       },
       {
         "TreatmentID": 11,
@@ -579,7 +645,9 @@
         "PathogenGroup": "Bacteria",
         "type": "uniform",
         "min": 0.7,
-        "max": 2.2
+        "max": 2.2,
+        "ReferenceName": "WHO (2011): Drinking water guideline, Table 7.7",
+        "ReferenceLink": "http://apps.who.int/iris/bitstream/10665/44584/1/9789241548151_eng.pdf#page=162"
       },
       {
         "TreatmentID": 11,
@@ -588,7 +656,9 @@
         "PathogenGroup": "Protozoa",
         "type": "uniform",
         "min": 1.4,
-        "max": 2.3
+        "max": 2.3,
+        "ReferenceName": "WHO (2011): Drinking water guideline, Table 7.7",
+        "ReferenceLink": "http://apps.who.int/iris/bitstream/10665/44584/1/9789241548151_eng.pdf#page=162"
       },
       {
         "TreatmentID": 12,
@@ -597,7 +667,9 @@
         "PathogenGroup": "Bacteria",
         "type": "uniform",
         "min": 2,
-        "max": 2
+        "max": 2,
+        "ReferenceName": "WHO (2011): Drinking water guideline, Table 7.7",
+        "ReferenceLink": "http://apps.who.int/iris/bitstream/10665/44584/1/9789241548151_eng.pdf#page=162"
       },
       {
         "TreatmentID": 12,
@@ -606,7 +678,9 @@
         "PathogenGroup": "Protozoa",
         "type": "uniform",
         "min": 2,
-        "max": 2
+        "max": 2,
+        "ReferenceName": "WHO (2011): Drinking water guideline, Table 7.7",
+        "ReferenceLink": "http://apps.who.int/iris/bitstream/10665/44584/1/9789241548151_eng.pdf#page=162"
       },
       {
         "TreatmentID": 12,
@@ -615,7 +689,9 @@
         "PathogenGroup": "Viruses",
         "type": "uniform",
         "min": 2,
-        "max": 2
+        "max": 2,
+        "ReferenceName": "WHO (2011): Drinking water guideline, Table 7.7",
+        "ReferenceLink": "http://apps.who.int/iris/bitstream/10665/44584/1/9789241548151_eng.pdf#page=162"
       },
       {
         "TreatmentID": 13,
@@ -624,7 +700,9 @@
         "PathogenGroup": "Bacteria",
         "type": "uniform",
         "min": 2,
-        "max": 2
+        "max": 6,
+        "ReferenceName": "NRMMC-EPHC-AHMC (2006)",
+        "ReferenceLink": "Australian Guidelines for Water Recycling: Managing Health and Environmental Risks (Phase 1) Natural Resource Ministerial Management Council, Environment Protection and Heritage Council and National Health and Medical Research Council, Canberra"
       },
       {
         "TreatmentID": 13,
@@ -632,8 +710,10 @@
         "TreatmentGroup": "Primary disinfection",
         "PathogenGroup": "Protozoa",
         "type": "uniform",
-        "min": 2,
-        "max": 2
+        "min": 0.5,
+        "max": 1.5,
+        "ReferenceName": "NRMMC-EPHC-AHMC (2006)",
+        "ReferenceLink": "Australian Guidelines for Water Recycling: Managing Health and Environmental Risks (Phase 1) Natural Resource Ministerial Management Council, Environment Protection and Heritage Council and National Health and Medical Research Council, Canberra"
       },
       {
         "TreatmentID": 13,
@@ -641,8 +721,10 @@
         "TreatmentGroup": "Primary disinfection",
         "PathogenGroup": "Viruses",
         "type": "uniform",
-        "min": 2,
-        "max": 2
+        "min": 1,
+        "max": 3,
+        "ReferenceName": "NRMMC-EPHC-AHMC (2006)",
+        "ReferenceLink": "Australian Guidelines for Water Recycling: Managing Health and Environmental Risks (Phase 1) Natural Resource Ministerial Management Council, Environment Protection and Heritage Council and National Health and Medical Research Council, Canberra"
       },
       {
         "TreatmentID": 14,
@@ -651,7 +733,9 @@
         "PathogenGroup": "Bacteria",
         "type": "uniform",
         "min": 2,
-        "max": 2
+        "max": 2,
+        "ReferenceName": "WHO (2011): Drinking water guideline, Table 7.7",
+        "ReferenceLink": "http://apps.who.int/iris/bitstream/10665/44584/1/9789241548151_eng.pdf#page=162"
       },
       {
         "TreatmentID": 14,
@@ -660,7 +744,9 @@
         "PathogenGroup": "Protozoa",
         "type": "uniform",
         "min": 2,
-        "max": 2
+        "max": 2,
+        "ReferenceName": "WHO (2011): Drinking water guideline, Table 7.7",
+        "ReferenceLink": "http://apps.who.int/iris/bitstream/10665/44584/1/9789241548151_eng.pdf#page=162"
       },
       {
         "TreatmentID": 14,
@@ -669,66 +755,481 @@
         "PathogenGroup": "Viruses",
         "type": "uniform",
         "min": 2,
-        "max": 2
+        "max": 2,
+        "ReferenceName": "WHO (2011): Drinking water guideline, Table 7.7",
+        "ReferenceLink": "http://apps.who.int/iris/bitstream/10665/44584/1/9789241548151_eng.pdf#page=162"
       },
       {
         "TreatmentID": 15,
-        "TreatmentName": "UV",
-        "TreatmentGroup": "Primary disinfection",
+        "TreatmentName": "Primary disinfection",
+        "TreatmentGroup": "UV disinfection, wastewater",
+        "PathogenGroup": "Bacteria",
+        "type": "unifor",
+        "value": 2,
+        "min": 4,
+        "sdlog": "DEMEAUWARE Deliverable 3.1 (p.18-19): NRMMC-EPHC-AHMC (2006), WHO 2006)",
+        "ReferenceName": "http://demoware.eu/en/results/deliverables/deliverable-d3-1-appropiate-and-user-friendly-methodologies-for-ra_lca_wfp.pdf/@@download/file/Deliverable%20D3.1%20-%20Appropiate%20and%20user%20friendly%20methodologies%20for%20RA_LCA_WFP.pdf"
+      },
+      {
+        "TreatmentID": 15,
+        "TreatmentName": "Primary disinfection",
+        "TreatmentGroup": "UV disinfection, wastewater",
+        "PathogenGroup": "Viruses",
+        "type": "uniform",
+        "value": 1,
+        "min": 3,
+        "sdlog": "DEMEAUWARE Deliverable 3.1 (p.18-19): NRMMC-EPHC-AHMC (2006), WHO 2006)",
+        "ReferenceName": "http://demoware.eu/en/results/deliverables/deliverable-d3-1-appropiate-and-user-friendly-methodologies-for-ra_lca_wfp.pdf/@@download/file/Deliverable%20D3.1%20-%20Appropiate%20and%20user%20friendly%20methodologies%20for%20RA_LCA_WFP.pdf"
+      },
+      {
+        "TreatmentID": 15,
+        "TreatmentName": "Primary disinfection",
+        "TreatmentGroup": "UV disinfection, wastewater",
+        "PathogenGroup": "Protozoa",
+        "type": "uniform",
+        "value": 3,
+        "min": 3,
+        "sdlog": "DEMEAUWARE Deliverable 3.1 (p.18-19): NRMMC-EPHC-AHMC (2006), WHO 2006)",
+        "ReferenceName": "http://demoware.eu/en/results/deliverables/deliverable-d3-1-appropiate-and-user-friendly-methodologies-for-ra_lca_wfp.pdf/@@download/file/Deliverable%20D3.1%20-%20Appropiate%20and%20user%20friendly%20methodologies%20for%20RA_LCA_WFP.pdf"
+      },
+      {
+        "TreatmentID": 16,
+        "TreatmentName": "Primary treatment",
+        "TreatmentGroup": "Quiescent basin",
         "PathogenGroup": "Bacteria",
         "type": "uniform",
-        "min": 4,
-        "max": 4
+        "min": 0,
+        "max": 0.5,
+        "ReferenceName": "NRMMC-EPHC-AHMC (2006)",
+        "ReferenceLink": "Australian Guidelines for Water Recycling: Managing Health and Environmental Risks (Phase 1) Natural Resource Ministerial Management Council, Environment Protection and Heritage Council and National Health and Medical Research Council, Canberra"
       },
       {
-        "TreatmentID": 15,
-        "TreatmentName": "UV",
-        "TreatmentGroup": "Primary disinfection",
+        "TreatmentID": 16,
+        "TreatmentName": "Primary treatment",
+        "TreatmentGroup": "Quiescent basin",
         "PathogenGroup": "Protozoa",
         "type": "uniform",
-        "min": 4,
-        "max": 4
+        "min": 0.5,
+        "max": 1,
+        "ReferenceName": "NRMMC-EPHC-AHMC (2006)",
+        "ReferenceLink": "Australian Guidelines for Water Recycling: Managing Health and Environmental Risks (Phase 1) Natural Resource Ministerial Management Council, Environment Protection and Heritage Council and National Health and Medical Research Council, Canberra"
       },
       {
-        "TreatmentID": 15,
-        "TreatmentName": "UV",
-        "TreatmentGroup": "Primary disinfection",
+        "TreatmentID": 16,
+        "TreatmentName": "Primary treatment",
+        "TreatmentGroup": "Quiescent basin",
         "PathogenGroup": "Viruses",
         "type": "uniform",
-        "min": 4,
-        "max": 4
+        "min": 0,
+        "max": 0.1,
+        "ReferenceName": "NRMMC-EPHC-AHMC (2006)",
+        "ReferenceLink": "Australian Guidelines for Water Recycling: Managing Health and Environmental Risks (Phase 1) Natural Resource Ministerial Management Council, Environment Protection and Heritage Council and National Health and Medical Research Council, Canberra"
+      },
+      {
+        "TreatmentID": 17,
+        "TreatmentName": "Secondary treatment",
+        "TreatmentGroup": "Activated sludge",
+        "PathogenGroup": "Bacteria",
+        "type": "uniform",
+        "min": 1,
+        "max": 3,
+        "ReferenceName": "NRMMC-EPHC-AHMC (2006)",
+        "ReferenceLink": "Australian Guidelines for Water Recycling: Managing Health and Environmental Risks (Phase 1) Natural Resource Ministerial Management Council, Environment Protection and Heritage Council and National Health and Medical Research Council, Canberra"
+      },
+      {
+        "TreatmentID": 17,
+        "TreatmentName": "Secondary treatment",
+        "TreatmentGroup": "Activated sludge",
+        "PathogenGroup": "Protozoa",
+        "type": "uniform",
+        "min": 0.5,
+        "max": 1.5,
+        "ReferenceName": "NRMMC-EPHC-AHMC (2006)",
+        "ReferenceLink": "Australian Guidelines for Water Recycling: Managing Health and Environmental Risks (Phase 1) Natural Resource Ministerial Management Council, Environment Protection and Heritage Council and National Health and Medical Research Council, Canberra"
+      },
+      {
+        "TreatmentID": 17,
+        "TreatmentName": "Secondary treatment",
+        "TreatmentGroup": "Activated sludge",
+        "PathogenGroup": "Viruses",
+        "type": "uniform",
+        "min": 0.5,
+        "max": 2,
+        "ReferenceName": "NRMMC-EPHC-AHMC (2006)",
+        "ReferenceLink": "Australian Guidelines for Water Recycling: Managing Health and Environmental Risks (Phase 1) Natural Resource Ministerial Management Council, Environment Protection and Heritage Council and National Health and Medical Research Council, Canberra"
+      },
+      {
+        "TreatmentID": 18,
+        "TreatmentName": "Soil-Aquifer passage",
+        "TreatmentGroup": "Natural attenuation",
+        "PathogenGroup": "Bacteria",
+        "type": "uniform",
+        "min": 1,
+        "max": 1,
+        "ReferenceName": "Sharma and Kennedy (2016)",
+        "ReferenceLink": "https://10.1016/j.ibiod.2016.09.013"
+      },
+      {
+        "TreatmentID": 18,
+        "TreatmentName": "Soil-Aquifer passage",
+        "TreatmentGroup": "Natural attenuation",
+        "PathogenGroup": "Protozoa",
+        "type": "uniform",
+        "min": 1,
+        "max": 1,
+        "ReferenceName": "Sharma and Kennedy (2016)",
+        "ReferenceLink": "https://10.1016/j.ibiod.2016.09.013"
+      },
+      {
+        "TreatmentID": 18,
+        "TreatmentName": "Soil-Aquifer passage",
+        "TreatmentGroup": "Natural attenuation",
+        "PathogenGroup": "Viruses",
+        "type": "uniform",
+        "min": 1,
+        "max": 1,
+        "ReferenceName": "Sharma and Kennedy (2016)",
+        "ReferenceLink": "https://10.1016/j.ibiod.2016.09.013"
+      },
+      {
+        "TreatmentID": 19,
+        "TreatmentName": "Primary disinfection",
+        "TreatmentGroup": "UV disinfection 20 mJ/cm2, drinking",
+        "PathogenGroup": "Bacteria",
+        "type": "uniform",
+        "min": 4.6,
+        "max": 6,
+        "ReferenceName": "Hijnen et al. (2006)",
+        "ReferenceLink": "https://doi.org/10.1016/j.watres.2005.10.030"
+      },
+      {
+        "TreatmentID": 19,
+        "TreatmentName": "Primary disinfection",
+        "TreatmentGroup": "UV disinfection 20 mJ/cm2, drinking",
+        "PathogenGroup": "Viruses",
+        "type": "uniform",
+        "min": 2,
+        "max": 3.1,
+        "ReferenceName": "Hijnen et al. (2006)",
+        "ReferenceLink": "https://doi.org/10.1016/j.watres.2005.10.030"
+      },
+      {
+        "TreatmentID": 19,
+        "TreatmentName": "Primary disinfection",
+        "TreatmentGroup": "UV disinfection 20 mJ/cm2, drinking",
+        "PathogenGroup": "Protozoa",
+        "type": "uniform",
+        "min": 2.4,
+        "max": 3,
+        "ReferenceName": "Hijnen et al. (2006)",
+        "ReferenceLink": "https://doi.org/10.1016/j.watres.2005.10.030"
+      },
+      {
+        "TreatmentID": 20,
+        "TreatmentName": "Primary disinfection",
+        "TreatmentGroup": "UV disinfection 40 mJ/cm2, drinking",
+        "PathogenGroup": "Bacteria",
+        "type": "uniform",
+        "min": 4.6,
+        "max": 6,
+        "ReferenceName": "Hijnen et al. (2006)",
+        "ReferenceLink": "https://doi.org/10.1016/j.watres.2005.10.030"
+      },
+      {
+        "TreatmentID": 20,
+        "TreatmentName": "Primary disinfection",
+        "TreatmentGroup": "UV disinfection 40 mJ/cm2, drinking",
+        "PathogenGroup": "Viruses",
+        "type": "uniform",
+        "min": 4.1,
+        "max": 5.9,
+        "ReferenceName": "Hijnen et al. (2006)",
+        "ReferenceLink": "https://doi.org/10.1016/j.watres.2005.10.030"
+      },
+      {
+        "TreatmentID": 20,
+        "TreatmentName": "Primary disinfection",
+        "TreatmentGroup": "UV disinfection 40 mJ/cm2, drinking",
+        "PathogenGroup": "Protozoa",
+        "type": "uniform",
+        "min": 2.5,
+        "max": 3,
+        "ReferenceName": "Hijnen et al. (2006)",
+        "ReferenceLink": "https://doi.org/10.1016/j.watres.2005.10.030"
+      },
+      {
+        "TreatmentID": 21,
+        "TreatmentName": "Filtration",
+        "TreatmentGroup": "Microfiltration",
+        "PathogenGroup": "Bacteria",
+        "type": "uniform",
+        "min": 0,
+        "max": 4.3,
+        "ReferenceName": "MICRORISK final report chapter 4 Table 4.11",
+        "ReferenceLink": "https://www.kwrwater.nl/wp-content/uploads/2016/09/MICRORISK-FINAL-REPORT-Quantitative-microbial-risk-assessment-in-the-Water-Safety-Plan.pdf"
+      },
+      {
+        "TreatmentID": 21,
+        "TreatmentName": "Filtration",
+        "TreatmentGroup": "Microfiltration",
+        "PathogenGroup": "Viruses",
+        "type": "uniform",
+        "min": 0,
+        "max": 3.7,
+        "ReferenceName": "MICRORISK final report chapter 4 Table 4.11",
+        "ReferenceLink": "https://www.kwrwater.nl/wp-content/uploads/2016/09/MICRORISK-FINAL-REPORT-Quantitative-microbial-risk-assessment-in-the-Water-Safety-Plan.pdf"
+      },
+      {
+        "TreatmentID": 21,
+        "TreatmentName": "Filtration",
+        "TreatmentGroup": "Microfiltration",
+        "PathogenGroup": "Protozoa",
+        "type": "uniform",
+        "min": 2.3,
+        "max": 6,
+        "ReferenceName": "MICRORISK final report chapter 4 Table 4.11",
+        "ReferenceLink": "https://www.kwrwater.nl/wp-content/uploads/2016/09/MICRORISK-FINAL-REPORT-Quantitative-microbial-risk-assessment-in-the-Water-Safety-Plan.pdf"
+      },
+      {
+        "TreatmentID": 22,
+        "TreatmentName": "Filtration",
+        "TreatmentGroup": "Ultrafiltration",
+        "PathogenGroup": "Bacteria",
+        "type": "uniform",
+        "min": 5.5,
+        "max": 6,
+        "ReferenceName": "NSF/ANSI 419  validation",
+        "ReferenceLink": "http://info.nsf.org/Certified/pdwe/Listings.asp"
+      },
+      {
+        "TreatmentID": 22,
+        "TreatmentName": "Filtration",
+        "TreatmentGroup": "Ultrafiltration",
+        "PathogenGroup": "Viruses",
+        "type": "uniform",
+        "min": 2.69,
+        "max": 5.14,
+        "ReferenceName": "NSF/ANSI 419  validation",
+        "ReferenceLink": "http://info.nsf.org/Certified/pdwe/Listings.asp"
+      },
+      {
+        "TreatmentID": 22,
+        "TreatmentName": "Filtration",
+        "TreatmentGroup": "Ultrafiltration",
+        "PathogenGroup": "Protozoa",
+        "type": "uniform",
+        "min": 5.3,
+        "max": 6.5,
+        "ReferenceName": "NSF/ANSI 419  validation",
+        "ReferenceLink": "http://info.nsf.org/Certified/pdwe/Listings.asp"
+      },
+      {
+        "TreatmentID": 23,
+        "TreatmentName": "Filtration",
+        "TreatmentGroup": "Nanofiltration",
+        "PathogenGroup": "Bacteria",
+        "type": "uniform",
+        "min": 5.44,
+        "max": 6,
+        "ReferenceName": "NSF/ANSI 419  validation",
+        "ReferenceLink": "http://info.nsf.org/Certified/pdwe/Listings.asp"
+      },
+      {
+        "TreatmentID": 23,
+        "TreatmentName": "Filtration",
+        "TreatmentGroup": "Nanofiltration",
+        "PathogenGroup": "Viruses",
+        "type": "uniform",
+        "min": 5.44,
+        "max": 6,
+        "ReferenceName": "NSF/ANSI 419  validation",
+        "ReferenceLink": "http://info.nsf.org/Certified/pdwe/Listings.asp"
+      },
+      {
+        "TreatmentID": 23,
+        "TreatmentName": "Filtration",
+        "TreatmentGroup": "Nanofiltration",
+        "PathogenGroup": "Protozoa",
+        "type": "uniform",
+        "min": 5.75,
+        "max": 6.32,
+        "ReferenceName": "NSF/ANSI 419  validation",
+        "ReferenceLink": "http://info.nsf.org/Certified/pdwe/Listings.asp"
+      },
+      {
+        "TreatmentID": 24,
+        "TreatmentName": "Filtration",
+        "TreatmentGroup": "Reverse osmosis",
+        "PathogenGroup": "Bacteria",
+        "type": "uniform",
+        "min": 5.44,
+        "max": 6,
+        "ReferenceName": "NSF/ANSI 419  validation",
+        "ReferenceLink": "http://info.nsf.org/Certified/pdwe/Listings.asp"
+      },
+      {
+        "TreatmentID": 24,
+        "TreatmentName": "Filtration",
+        "TreatmentGroup": "Reverse osmosis",
+        "PathogenGroup": "Viruses",
+        "type": "uniform",
+        "min": 5.44,
+        "max": 6,
+        "ReferenceName": "NSF/ANSI 419  validation",
+        "ReferenceLink": "http://info.nsf.org/Certified/pdwe/Listings.asp"
+      },
+      {
+        "TreatmentID": 24,
+        "TreatmentName": "Filtration",
+        "TreatmentGroup": "Reverse osmosis",
+        "PathogenGroup": "Protozoa",
+        "type": "uniform",
+        "min": 5.75,
+        "max": 6.32,
+        "ReferenceName": "NSF/ANSI 419  validation",
+        "ReferenceLink": "http://info.nsf.org/Certified/pdwe/Listings.asp"
+      },
+      {
+        "TreatmentID": 25,
+        "TreatmentName": "Wetlands",
+        "TreatmentGroup": "Wetlands, surface flow",
+        "PathogenGroup": "Bacteria",
+        "type": "uniform",
+        "min": 1.5,
+        "max": 2.5,
+        "ReferenceName": "DEMEAUWARE Deliverable 3.1 (p.18-19): NRMMC-EPHC-AHMC (2006), WHO 2006)",
+        "ReferenceLink": "http://demoware.eu/en/results/deliverables/deliverable-d3-1-appropiate-and-user-friendly-methodologies-for-ra_lca_wfp.pdf/@@download/file/Deliverable%20D3.1%20-%20Appropiate%20and%20user%20friendly%20methodologies%20for%20RA_LCA_WFP.pdf"
+      },
+      {
+        "TreatmentID": 25,
+        "TreatmentName": "Wetlands",
+        "TreatmentGroup": "Wetlands, surface flow",
+        "PathogenGroup": "Protozoa",
+        "type": "uniform",
+        "min": 0.5,
+        "max": 1.5,
+        "ReferenceName": "DEMEAUWARE Deliverable 3.1 (p.18-19): NRMMC-EPHC-AHMC (2006), WHO 2006)",
+        "ReferenceLink": "http://demoware.eu/en/results/deliverables/deliverable-d3-1-appropiate-and-user-friendly-methodologies-for-ra_lca_wfp.pdf/@@download/file/Deliverable%20D3.1%20-%20Appropiate%20and%20user%20friendly%20methodologies%20for%20RA_LCA_WFP.pdf"
+      },
+      {
+        "TreatmentID": 26,
+        "TreatmentName": "Wetlands",
+        "TreatmentGroup": "Wetlands, subsurface flow",
+        "PathogenGroup": "Bacteria",
+        "type": "uniform",
+        "min": 0.5,
+        "max": 3,
+        "ReferenceName": "DEMEAUWARE Deliverable 3.1 (p.18-19): NRMMC-EPHC-AHMC (2006), WHO 2006)",
+        "ReferenceLink": "http://demoware.eu/en/results/deliverables/deliverable-d3-1-appropiate-and-user-friendly-methodologies-for-ra_lca_wfp.pdf/@@download/file/Deliverable%20D3.1%20-%20Appropiate%20and%20user%20friendly%20methodologies%20for%20RA_LCA_WFP.pdf"
+      },
+      {
+        "TreatmentID": 26,
+        "TreatmentName": "Wetlands",
+        "TreatmentGroup": "Wetlands, subsurface flow",
+        "PathogenGroup": "Protozoa",
+        "type": "uniform",
+        "min": 0.5,
+        "max": 2,
+        "ReferenceName": "DEMEAUWARE Deliverable 3.1 (p.18-19): NRMMC-EPHC-AHMC (2006), WHO 2006)",
+        "ReferenceLink": "http://demoware.eu/en/results/deliverables/deliverable-d3-1-appropiate-and-user-friendly-methodologies-for-ra_lca_wfp.pdf/@@download/file/Deliverable%20D3.1%20-%20Appropiate%20and%20user%20friendly%20methodologies%20for%20RA_LCA_WFP.pdf"
+      },
+      {
+        "TreatmentID": 27,
+        "TreatmentName": "Filtration",
+        "TreatmentGroup": "Dual media filtration",
+        "PathogenGroup": "Bacteria",
+        "type": "uniform",
+        "min": 0,
+        "max": 1,
+        "ReferenceName": "DEMEAUWARE Deliverable 3.1 (p.18-19): NRMMC-EPHC-AHMC (2006), WHO 2006)",
+        "ReferenceLink": "http://demoware.eu/en/results/deliverables/deliverable-d3-1-appropiate-and-user-friendly-methodologies-for-ra_lca_wfp.pdf/@@download/file/Deliverable%20D3.1%20-%20Appropiate%20and%20user%20friendly%20methodologies%20for%20RA_LCA_WFP.pdf"
+      },
+      {
+        "TreatmentID": 27,
+        "TreatmentName": "Filtration",
+        "TreatmentGroup": "Dual media filtration",
+        "PathogenGroup": "Viruses",
+        "type": "uniform",
+        "min": 0.5,
+        "max": 3,
+        "ReferenceName": "DEMEAUWARE Deliverable 3.1 (p.18-19): NRMMC-EPHC-AHMC (2006), WHO 2006)",
+        "ReferenceLink": "http://demoware.eu/en/results/deliverables/deliverable-d3-1-appropiate-and-user-friendly-methodologies-for-ra_lca_wfp.pdf/@@download/file/Deliverable%20D3.1%20-%20Appropiate%20and%20user%20friendly%20methodologies%20for%20RA_LCA_WFP.pdf"
+      },
+      {
+        "TreatmentID": 27,
+        "TreatmentName": "Filtration",
+        "TreatmentGroup": "Dual media filtration",
+        "PathogenGroup": "Protozoa",
+        "type": "uniform",
+        "min": 1.5,
+        "max": 2.5,
+        "ReferenceName": "DEMEAUWARE Deliverable 3.1 (p.18-19): NRMMC-EPHC-AHMC (2006), WHO 2006)",
+        "ReferenceLink": "http://demoware.eu/en/results/deliverables/deliverable-d3-1-appropiate-and-user-friendly-methodologies-for-ra_lca_wfp.pdf/@@download/file/Deliverable%20D3.1%20-%20Appropiate%20and%20user%20friendly%20methodologies%20for%20RA_LCA_WFP.pdf"
+      },
+      {
+        "TreatmentID": 28,
+        "TreatmentName": "Filtration",
+        "TreatmentGroup": "Membrane filtration",
+        "PathogenGroup": "Bacteria",
+        "type": "uniform",
+        "min": 3.5,
+        "max": 6,
+        "ReferenceName": "DEMEAUWARE Deliverable 3.1 (p.18-19): NRMMC-EPHC-AHMC (2006), WHO 2006)",
+        "ReferenceLink": "http://demoware.eu/en/results/deliverables/deliverable-d3-1-appropiate-and-user-friendly-methodologies-for-ra_lca_wfp.pdf/@@download/file/Deliverable%20D3.1%20-%20Appropiate%20and%20user%20friendly%20methodologies%20for%20RA_LCA_WFP.pdf"
+      },
+      {
+        "TreatmentID": 28,
+        "TreatmentName": "Filtration",
+        "TreatmentGroup": "Membrane filtration",
+        "PathogenGroup": "Viruses",
+        "type": "uniform",
+        "min": 2.5,
+        "max": 6,
+        "ReferenceName": "DEMEAUWARE Deliverable 3.1 (p.18-19): NRMMC-EPHC-AHMC (2006), WHO 2006)",
+        "ReferenceLink": "http://demoware.eu/en/results/deliverables/deliverable-d3-1-appropiate-and-user-friendly-methodologies-for-ra_lca_wfp.pdf/@@download/file/Deliverable%20D3.1%20-%20Appropiate%20and%20user%20friendly%20methodologies%20for%20RA_LCA_WFP.pdf"
+      },
+      {
+        "TreatmentID": 28,
+        "TreatmentName": "Filtration",
+        "TreatmentGroup": "Membrane filtration",
+        "PathogenGroup": "Protozoa",
+        "type": "uniform",
+        "min": 6,
+        "max": 6,
+        "ReferenceName": "DEMEAUWARE Deliverable 3.1 (p.18-19): NRMMC-EPHC-AHMC (2006), WHO 2006)",
+        "ReferenceLink": "http://demoware.eu/en/results/deliverables/deliverable-d3-1-appropiate-and-user-friendly-methodologies-for-ra_lca_wfp.pdf/@@download/file/Deliverable%20D3.1%20-%20Appropiate%20and%20user%20friendly%20methodologies%20for%20RA_LCA_WFP.pdf"
       }
     ],
     "schemes": [
       {
         "TreatmentSchemeID": 1,
-        "TreatmentSchemeName": "Berlin (BF + Slow sand)",
-        "TreatmentID": 8,
-        "TreatmentName": "Slow sand filtration"
+        "TreatmentSchemeName": "default",
+        "TreatmentID": 16,
+        "TreatmentName": "Primary treatment"
       },
       {
         "TreatmentSchemeID": 1,
-        "TreatmentSchemeName": "Berlin (BF + Slow sand)",
-        "TreatmentID": 9,
-        "TreatmentName": "Bank filtration"
+        "TreatmentSchemeName": "default",
+        "TreatmentID": 17,
+        "TreatmentName": "Secondary treatment"
       },
       {
-        "TreatmentSchemeID": 2,
-        "TreatmentSchemeName": "Depth & surface filtration",
-        "TreatmentID": 1,
-        "TreatmentName": "Conventional clarification"
+        "TreatmentSchemeID": 1,
+        "TreatmentSchemeName": "default",
+        "TreatmentID": 13,
+        "TreatmentName": "Chlorine dioxide"
       },
       {
-        "TreatmentSchemeID": 2,
-        "TreatmentSchemeName": "Depth & surface filtration",
-        "TreatmentID": 5,
-        "TreatmentName": "Granular high-rate filtration"
+        "TreatmentSchemeID": 1,
+        "TreatmentSchemeName": "default",
+        "TreatmentID": 18,
+        "TreatmentName": "Soil-Aquifer passage"
       },
       {
-        "TreatmentSchemeID": 2,
-        "TreatmentSchemeName": "Depth & surface filtration",
-        "TreatmentID": 15,
-        "TreatmentName": "UV"
+        "TreatmentSchemeID": 1,
+        "TreatmentSchemeName": "default",
+        "TreatmentID": 24,
+        "TreatmentName": "Filtration"
       }
     ]
   },
@@ -1244,9 +1745,7 @@
     },
     {
       "PathogenID": 3,
-      "PathogenName": "Campylobacter jejuni and Campylobacter coli",
-      "infection_to_illness": 0.7,
-      "dalys_per_case": 0.0046
+      "PathogenName": "Campylobacter jejuni and Campylobacter coli"
     },
     {
       "PathogenID": 4,
@@ -1258,7 +1757,11 @@
     },
     {
       "PathogenID": 6,
-      "PathogenName": "Escherichia coli"
+      "PathogenName": "Escherichia coli",
+      "infection_to_illness": 0.25,
+      "dalys_per_case": 0.0547,
+      "ReferenceNameInfection": "Bartak et al. (2014) Application of risk-based assessment and management to riverbank filtration sites in India",
+      "ReferenceNameDalys": "Havelaar and Melse (2003) Table 2.7 Quantifying public health risk in the WHO Guidelines - A burden of disease approach"
     },
     {
       "PathogenID": 7,
@@ -1363,8 +1866,10 @@
     {
       "PathogenID": 32,
       "PathogenName": "Rotavirus",
-      "infection_to_illness": 0.03,
-      "dalys_per_case": 0.014
+      "infection_to_illness": 0.5,
+      "dalys_per_case": 0.014,
+      "ReferenceNameInfection": "WHO (2011): Guidelines for drinking-water quality. World Health Organisation, Table 7.4",
+      "ReferenceNameDalys": "http://apps.who.int/iris/bitstream/10665/44584/1/9789241548151_eng.pdf#page=155"
     },
     {
       "PathogenID": 33,
@@ -1381,13 +1886,14 @@
     {
       "PathogenID": 36,
       "PathogenName": "Giardia duodenalis",
-      "infection_to_illness": 0.3,
-      "dalys_per_case": 0.0015
+      "infection_to_illness": 0.7,
+      "dalys_per_case": 0.0015,
+      "ReferenceNameInfection": "WHO (2011): Guidelines for drinking-water quality. World Health Organisation, Table 7.4",
+      "ReferenceNameDalys": "http://apps.who.int/iris/bitstream/10665/44584/1/9789241548151_eng.pdf#page=155"
     },
     {
       "PathogenID": 37,
       "PathogenName": "Naegleria fowleri"
     }
   ]
-}
 }
